@@ -1,10 +1,10 @@
-# Feature: Warehouse Order and Shipment Management
+# Feature: Supplier Orders and Shipments
 
 **Feature ID:** 1  
-**Branch pattern:** `feature/1-order-shipment-management`  
+**Branch pattern:** `Software-Enginnering-2-projects`  
 **Status:** Draft  
-**Created:** 2026-09-28  
-**Input:** Manage supplier orders and shipment information so warehouse personnel can record, track, and process warehouse orders and deliveries.  
+**Created:** 2026-09-24  
+**Input:**  Manage supplier orders and shipment information so that warehouse employees can record, track, and process orders and shipments.
 **Depends on:** None  
 **Related:** Bill of Lading; Supplier Order Form  
 
@@ -12,41 +12,45 @@
 
 ## User Stories
 
-### US-1.1: Create Supplier Order
+### US-1.1: Create a Supplier Order
+
 **As a** warehouse employee  
-**I want to** create a supplier order containing the supplier, customer number, order date, P.O. number, and product information  
-**So that** the warehouse can keep a record of products ordered from a manufacturer.
+**I want to** create a supplier order that includes the supplier, customer number, order date, P.O. number, and product information
+**So that**  the warehouse has a record of the products it ordered from the supplier.
 
 **Priority:** P1  
-**Independent test:** Create a supplier order with valid supplier and product information and verify that the order is saved with all entered information.  
-**Acceptance scenarios:** see ### US-1.1 under Acceptance Criteria
+**Independent test:**  Create an order by providing valid supplier and product information and verify that the order is created with the supplied information.
+**Acceptance scenarios:**  See US-1.1 Acceptance Criteria
 
 ### US-1.2: Record Shipment Information
+
 **As a** warehouse employee  
-**I want to** record shipment information including the destination, source, customer number, P.O. number, driver, and shipped date  
-**So that** the warehouse can keep track of outgoing shipments.
+**I want to**  record the source, destination, customer number, P.O. number, driver, and ship date of a shipment
+**So that** the warehouse can track outgoing shipments.
 
 **Priority:** P1  
-**Independent test:** Create a shipment using valid bill-of-lading information and verify that the shipment contains the entered destination, source, customer, P.O. number, driver, and shipped date.  
-**Acceptance scenarios:** see ### US-1.2 under Acceptance Criteria
+**Independent test:** Create a shipment with valid Bill of Lading information and verify that the shipment information has been saved.
+**Acceptance scenarios:** See US-1.2 Acceptance Criteria
 
-### US-1.3: Record Shipment Products
+### US-1.3: Record Products
+
 **As a** warehouse employee  
-**I want to** record the SKU, description, quantity or cases, price, and total for products  
-**So that** the warehouse can identify and account for the products included in an order or shipment.
+**I want to** I want to include the product's SKU, description, quantity or cases, price, and total with an order or shipment
+**So that** the warehouse knows what products are included in an order or shipment.
 
 **Priority:** P1  
-**Independent test:** Add a product to an order or shipment and verify that its SKU, description, quantity/cases, price, and total are recorded.  
-**Acceptance scenarios:** see ### US-1.3 under Acceptance Criteria
+**Independent test:** Add a product to an order or shipment and verify that its information has been saved.
+**Acceptance scenarios:** See US-1.3 under Acceptance Criteria.
 
 ### US-1.4: Record Delivery and Receiving Information
+
 **As a** warehouse employee  
-**I want to** record the delivery date and receiving information  
-**So that** the warehouse has a record of when a shipment was delivered and received.
+**I want to** record the delivery date and who received the shipment  
+**So that** the warehouse has the date and person who received the shipment.
 
 **Priority:** P1  
-**Independent test:** Enter a delivery date and receiving information for a shipment and verify that both values are stored with the shipment.  
-**Acceptance scenarios:** see ### US-1.4 under Acceptance Criteria
+**Independent test:** Provide a delivery date and receiving information for a shipment and verify that that information has been saved.
+**Acceptance scenarios:** See US-1.4 under Acceptance Criteria.
 
 ---
 
@@ -54,77 +58,77 @@
 
 ### Functional Requirements
 
-- **FR-001**: System MUST allow users to create a supplier order.
-- **FR-002**: System MUST allow users to record the supplier/manufacturer associated with a supplier order.
-- **FR-003**: System MUST allow users to record the customer number for a supplier order.
-- **FR-004**: System MUST allow users to record the order date.
-- **FR-005**: System MUST allow users to record a P.O. number.
-- **FR-006**: System MUST allow users to record products associated with an order.
-- **FR-007**: Each order product MUST support a SKU, description, number of cases, price, and total.
-- **FR-008**: System MUST allow users to create shipment records.
-- **FR-009**: A shipment MUST support a shipped-to address.
-- **FR-010**: A shipment MUST support a shipped-from address.
-- **FR-011**: System MUST allow users to record the customer number associated with a shipment.
-- **FR-012**: System MUST allow users to record the shipped date.
-- **FR-013**: System MUST allow users to record the P.O. number associated with a shipment.
-- **FR-014**: System MUST allow users to record the driver associated with a shipment.
-- **FR-015**: Shipment products MUST support a SKU, description, quantity, price, and total.
-- **FR-016**: System MUST allow users to record a delivery date.
-- **FR-017**: System MUST allow users to record who received the shipment.
-- **FR-018**: System MUST allow users to record an authorized-by value for a supplier order.
-- **FR-019**: System MUST allow users to record the order date associated with the supplier order.
-- **FR-020**: System MUST NOT allow a supplier order or shipment to be saved when required identifying information is missing.
+- **FR-001**: Warehouse employees can create a supplier order.
+- **FR-002**: A supplier order includes the supplier or manufacturer.
+- **FR-003**: A supplier order includes the customer number.
+- **FR-004**: A supplier order includes the order date.
+- **FR-005**: A supplier order includes a P.O. number.
+- **FR-006**: Products can be added to a supplier order.
+- **FR-007**: Each product includes a SKU, description, number of cases, price, and total.
+- **FR-008**: Warehouse employees can create shipment records.
+- **FR-009**: shipments includes where the products are being shipped to.
+- **FR-010**: shipments includes where the products are being shipped from.
+- **FR-011**: shipments includes the customer number.
+- **FR-012**: shipments includes the date it was shipped.
+- **FR-013**: shipments includes the P.O. number.
+- **FR-014**: shipments includes the driver.
+- **FR-015**: Products on a shipment include a SKU, description, quantity, price, and total.
+- **FR-016**: shipments can have a delivery date once it has been delivered.
+- **FR-017**: shipments can record who received it.
+- **FR-018**: suppliers order can record who authorized the order.
+- **FR-019**: The order date is saved with the supplier order.
+- **FR-020**: Required information must be entered before an order or shipment can be saved.
 
 ---
 
 ## Assumptions
 
-- The system will be used by warehouse personnel to manage supplier orders and shipments.
-- A supplier order is associated with a supplier/manufacturer.
-- A shipment can contain one or more products.
-- A product can be identified by a SKU.
-- The P.O. number can be used to associate an order with a shipment.
-- The system will store the information represented on the provided Supplier Order Form and Bill of Lading.
-- User authentication and authorization are not defined by the provided documents and are therefore not included in this feature.
-- Inventory quantity tracking, automatic stock adjustments, and warehouse-location tracking are not defined by the provided documents and are not included in this feature.
-- Payment processing is not defined by the provided documents and is not included.
-- Automated shipping or delivery scheduling is not defined by the provided documents and is not included.
+- Warehouse employees will use this feature to keep track of supplier orders and shipments.
+- Each supplier order is connected to a supplier or manufacturer.
+- All supplier orders are associated with a particular supplier or manufacturer
+- A product can be identified by its SKU
+- The P.O. number can be used to associate an order with a shipment
+- The fields on the Supplier Order Form and Bill of Lading will be represented in this feature's data models
+- User authentication and permissions are outside the scope of this feature
+- Inventory management and warehouse location tracking are outside the scope of this feature
+- Payment handling and processing are outside the scope of this feature
+- Shipping arrangements and delivery scheduling are outside the scope of this feature
 
 ---
 
 ## Edge Cases
 
-- Empty required field → System MUST identify the missing information and prevent the record from being saved.
-- Duplicate P.O. number → System MUST identify that the P.O. number already exists rather than silently creating an unintended duplicate.
-- Invalid quantity → System MUST reject a quantity that is not a valid positive value.
-- Invalid price → System MUST reject a price that is not a valid monetary value.
-- Missing SKU → System MUST prevent a product record from being saved without a SKU when the SKU is required.
-- Missing shipment destination → System MUST prevent a shipment from being saved without required destination information.
-- Missing driver → System MUST identify missing driver information when the driver is required for a shipment.
-- Missing receiving information → System MUST allow the shipment to remain incomplete if receiving information has not yet been provided.
-- Shipment without an associated P.O. number → System MUST identify the missing P.O. number when the P.O. number is required to associate the shipment with an order.
+- **Missing required information:** The user is told what information is missing and cannot save the record until it is entered.
+- **Duplicate P.O. number:** The system warns the user if the P.O. number is already being used.
+- **Invalid quantity:** A quantity must be greater than zero.
+- **Invalid price:** The price must be entered as a valid monetary value.
+- **Missing SKU:** A product cannot be saved without a required SKU.
+- **Missing destination:** A shipment cannot be saved without a shipping destination.
+- **Missing driver:** The system identifies the missing driver when a driver is required.
+- **Shipment has not arrived:** Delivery and receiving information can be left blank until the shipment arrives.
+- **Missing P.O. number:** The system identifies the missing P.O. number when it is needed to connect the shipment to an order.
 
 ---
 
 ## Success Criteria
 
-- **SC-001**: Every Gherkin scenario has at least one automated test before merge.
-- **SC-002**: Users can create and save a supplier order containing supplier, customer number, order date, P.O. number, and product information.
-- **SC-003**: Users can create and save a shipment containing source, destination, customer number, shipped date, P.O. number, and driver information.
-- **SC-004**: Users can record the products associated with an order or shipment using SKU, description, quantity/cases, price, and total.
-- **SC-005**: Users can record delivery and receiving information for a shipment.
+- **SC-001**: Each acceptance scenario has an automated test before the feature is merged.
+- **SC-002**: Employees can create and save a supplier order with the supplier, customer number, order date, P.O. number, and product information.
+- **SC-003**: Employees can create and save a shipment with the source, destination, customer number, ship date, P.O. number, and driver.
+- **SC-004**: Employees can add products to an order or shipment using the SKU, description, quantity or cases, price, and total.
+- **SC-005**: Employees can record the delivery date and who received a shipment.
 
 ---
 
 ## Key Entities
 
-- **Supplier Order**: Represents an order placed by the warehouse with a product manufacturer. Contains supplier, customer number, order date, P.O. number, authorization, and product information.
-- **Shipment**: Represents products being shipped from the warehouse to a destination. Contains source, destination, customer number, shipped date, P.O. number, driver, delivery date, and receiving information.
-- **Product**: Represents an item included in an order or shipment. Identified by SKU and described using a description, quantity/cases, price, and total.
-- **Customer**: Represents the customer associated with an order or shipment through a customer number.
-- **Supplier/Manufacturer**: Represents the company from which products are ordered.
-- **Driver**: Represents the driver associated with a shipment.
-- **Address**: Represents the source or destination address associated with an order or shipment.
+- **Supplier Order:** An order placed with a supplier or manufacturer. It contains the supplier, customer number, order date, P.O. number, authorization, and products.
+- **Shipment:** A group of products being shipped from one location to another. It contains the source, destination, customer number, ship date, P.O. number, driver, delivery date, and receiving information.
+- **Product:** An item included in an order or shipment. It is identified by a SKU and includes its description, quantity or cases, price, and total.
+- **Customer:** The customer connected to an order or shipment through their customer number.
+- **Supplier/Manufacturer:** The company supplying the products.
+- **Driver:** The person responsible for transporting the shipment.
+- **Address:** The location where the shipment is coming from or going to.
 
 ---
 
@@ -140,7 +144,7 @@
 | `customer_number` | VARCHAR | Required |
 | `order_date` | DATE | Required |
 | `po_number` | VARCHAR | Required |
-| `authorized_by` | VARCHAR | Optional until authorization is recorded |
+| `authorized_by` | VARCHAR | Optional until the order is authorized |
 
 ### `products` table
 
@@ -149,10 +153,10 @@
 | `id` | INTEGER PK | Auto-increment |
 | `sku` | VARCHAR | Required |
 | `description` | VARCHAR | Required |
-| `quantity` | INTEGER | Must be positive when used for shipment quantity |
-| `cases` | INTEGER | Must be positive when used for supplier orders |
-| `price` | DECIMAL | Must be a valid monetary value |
-| `total` | DECIMAL | Calculated or recorded total |
+| `quantity` | INTEGER | Must be greater than zero when used for a shipment |
+| `cases` | INTEGER | Must be greater than zero when used for a supplier order |
+| `price` | DECIMAL | Must be a valid price |
+| `total` | DECIMAL | Calculated or entered total |
 
 ### `shipments` table
 
@@ -165,75 +169,83 @@
 | `driver_name` | VARCHAR | Required |
 | `shipped_from` | VARCHAR | Required |
 | `shipped_to` | VARCHAR | Required |
-| `delivery_date` | DATE | Optional until delivery occurs |
-| `received_by` | VARCHAR | Optional until shipment is received |
+| `delivery_date` | DATE | Optional until delivery |
+| `received_by` | VARCHAR | Optional until the shipment is received |
 
-### Associations (if known)
+### Associations
 
-- A Supplier Order contains one or more Products.
-- A Shipment contains one or more Products.
-- A Shipment can be associated with a Supplier Order through the P.O. number.
-- A Supplier Order is associated with a supplier/manufacturer.
-- A Shipment is associated with a customer through the customer number.
-- A Shipment is associated with a driver.
-- A Shipment has a source and destination address.
+- A supplier order can contain multiple products.
+- A shipment can contain multiple products.
+- A shipment can be connected to a supplier order using the P.O. number.
+- A supplier order is connected to a supplier or manufacturer.
+- A shipment is connected to a customer through the customer number.
+- A shipment is connected to a driver.
+- A shipment has a source and destination.
 
 ---
 
 ## Acceptance Criteria
 
-### US-1.1 — Create Supplier Order
+### US-1.1 — Create a Supplier Order
 
 #### Scenario: Create a valid supplier order
-*   **Given** the user is creating a new supplier order
-*   **When** the user enters the supplier, customer number, order date, P.O. number, and product information
-*   **Then** the system MUST save the supplier order
-*   **And** the saved order MUST contain the entered information
 
-#### Scenario: Supplier order is missing required information
-*   **Given** the user is creating a new supplier order
-*   **When** the user attempts to save the order without required supplier, customer number, order date, P.O. number, or product information
-*   **Then** the system MUST prevent the order from being saved
-*   **And** the system MUST identify the missing required information
+* **Given** the employee is creating a new supplier order
+* **When** the employee enters the supplier, customer number, order date, P.O. number, and product information
+* **Then** the system saves the supplier order
+* **And** the saved order contains the information that was entered
+
+#### Scenario: Required information is missing
+
+* **Given** the employee is creating a new supplier order
+* **When** the employee tries to save the order without required information
+* **Then** the system does not save the order
+* **And** the system tells the employee what information is missing
 
 ### US-1.2 — Record Shipment Information
 
 #### Scenario: Create a valid shipment
-*   **Given** the user is creating a shipment
-*   **When** the user enters the shipped-from address, shipped-to address, customer number, shipped date, P.O. number, and driver
-*   **Then** the system MUST save the shipment
-*   **And** the shipment MUST contain the entered information
 
-#### Scenario: Shipment is missing required information
-*   **Given** the user is creating a shipment
-*   **When** the user attempts to save the shipment without required shipment information
-*   **Then** the system MUST prevent the shipment from being saved
-*   **And** the system MUST identify the missing information
+* **Given** the employee is creating a shipment
+* **When** the employee enters the source, destination, customer number, ship date, P.O. number, and driver
+* **Then** the system saves the shipment
+* **And** the shipment contains the information that was entered
 
-### US-1.3 — Record Shipment Products
+#### Scenario: Required shipment information is missing
 
-#### Scenario: Add a valid product
-*   **Given** a supplier order or shipment exists
-*   **When** the user enters a SKU, description, quantity or cases, price, and total
-*   **Then** the system MUST associate the product with the order or shipment
-*   **And** the product information MUST be available when viewing the order or shipment
+* **Given** the employee is creating a shipment
+* **When** the employee tries to save the shipment without required information
+* **Then** the system does not save the shipment
+* **And** the system tells the employee what information is missing
 
-#### Scenario: Product is missing required information
-*   **Given** a user is adding a product
-*   **When** the user attempts to save a product without a required SKU or description
-*   **Then** the system MUST prevent the product from being saved
-*   **And** the system MUST identify the missing information
+### US-1.3 — Record Products
+
+#### Scenario: Add a product
+
+* **Given** an order or shipment already exists
+* **When** the employee enters the SKU, description, quantity or cases, price, and total
+* **Then** the system adds the product to the order or shipment
+* **And** the product information can be viewed with the order or shipment
+
+#### Scenario: Product information is missing
+
+* **Given** the employee is adding a product
+* **When** the employee tries to save the product without required information
+* **Then** the system does not save the product
+* **And** the system tells the employee what information is missing
 
 ### US-1.4 — Record Delivery and Receiving Information
 
 #### Scenario: Record a completed delivery
-*   **Given** a shipment has been created
-*   **When** the user enters the delivery date and received-by information
-*   **Then** the system MUST save the delivery information
-*   **And** the shipment MUST show the recorded delivery and receiving information
+
+* **Given** a shipment has already been created
+* **When** the employee enters the delivery date and who received the shipment
+* **Then** the system saves the delivery information
+* **And** the shipment shows the delivery and receiving information
 
 #### Scenario: Shipment has not been received
-*   **Given** a shipment has been created but has not yet been delivered
-*   **When** the user views the shipment
-*   **Then** the delivery date and received-by fields MAY remain empty
-*   **And** the shipment MUST remain available for later completion
+
+* **Given** a shipment has been created but has not arrived yet
+* **When** the employee views the shipment
+* **Then** the delivery date and received-by fields can remain empty
+* **And** the shipment can be updated later when it arrives
