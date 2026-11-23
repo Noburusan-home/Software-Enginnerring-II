@@ -2,7 +2,7 @@
 
 **Status:** Draft  
 **Date:** 2026-11-23  
-**Related:** [design.md](./design.md) · [Feature catalog](./README.md)
+**Related:** [design.md](./design.md) · [Feature catalog](./README.md) · [Docs/adr](../Docs/adr/README.md) · [Docs/nfr](../Docs/nfr/quality-attributes.md)
 
 This file records **how** the warehouse application is shaped: clients, API, data, and roles. Product behavior lives in `feature-N-*.md`.
 

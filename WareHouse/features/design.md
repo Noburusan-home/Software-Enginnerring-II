@@ -2,7 +2,7 @@
 
 **Status:** Draft  
 **Date:** 2026-11-23  
-**Related:** [architecture.md](./architecture.md)
+**Related:** [architecture.md](./architecture.md) · [ADR-0002](../Docs/adr/0002-security-and-role-architecture.md) · [NFRs](../Docs/nfr/quality-attributes.md)
 
 Use this file for rules that apply to **every** warehouse feature. Feature files add only their delta.
 

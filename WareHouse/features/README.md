@@ -5,7 +5,9 @@ No application code may be written unless it maps to a requirement in one of the
 
 **Methodology:** OC CS Speckit (same section style as the course POS / Todo examples).  
 **Architecture:** [architecture.md](./architecture.md)  
-**Cross-cutting design:** [design.md](./design.md)
+**Cross-cutting design:** [design.md](./design.md)  
+**ADRs:** [../Docs/adr/README.md](../Docs/adr/README.md)  
+**NFRs:** [../Docs/nfr/quality-attributes.md](../Docs/nfr/quality-attributes.md)
 
 **Sprints** live in the agile tool — they are not part of these specs.
 
