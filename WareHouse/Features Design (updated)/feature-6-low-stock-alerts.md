@@ -194,6 +194,18 @@
 *   Actions: **Mark reviewed**, **Mark resolved**
 *   **Empty state:** `"No low-stock alerts."`
 
+### Mockups (guidance only)
+
+Dashboard frames that show **Low Stock Items**, thresholds, and **Low Stock / Critical** status:
+
+![Low stock alerts](../Docs/Ui/feature-6-low-stock/dashboard-low-stock-alerts.jpg)
+
+![Critical low stock](../Docs/Ui/feature-6-low-stock/dashboard-low-stock-critical.jpg)
+
+![Low stock items](../Docs/Ui/feature-6-low-stock/dashboard-low-stock-items.jpg)
+
+![Recent low-stock alerts](../Docs/Ui/feature-6-low-stock/dashboard-recent-alerts.jpg)
+
 ---
 
 ## Definition of Done

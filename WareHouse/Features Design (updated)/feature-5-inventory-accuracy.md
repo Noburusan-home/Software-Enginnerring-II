@@ -223,6 +223,16 @@
 *   **Empty state:** `"No verification records yet."`
 *   Discrepancy rows highlighted when result is `over` or `short`
 
+### Mockups (guidance only)
+
+Dashboard frames that show **Total Inventory**, **Inventory Overview**, and **Top Items**:
+
+![Inventory overview](../Docs/Ui/feature-5-inventory/dashboard-inventory-overview.jpg)
+
+![Inventory trend](../Docs/Ui/feature-5-inventory/dashboard-inventory-trend.jpg)
+
+![Top items](../Docs/Ui/feature-5-inventory/dashboard-top-items.jpg)
+
 ---
 
 ## Definition of Done

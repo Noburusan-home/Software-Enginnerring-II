@@ -206,6 +206,14 @@
 *   Line fields: expected SKU/qty, received SKU/qty, damaged qty
 *   **Empty state:** `"No inbound shipments to receive."`
 
+### Mockups (guidance only)
+
+Dashboard frames that show **Record Receipt** / **Receive Stock** and inbound shipment status:
+
+![Record receipt](../Docs/Ui/feature-8-receiving/dashboard-record-receipt.jpg)
+
+![Receive stock](../Docs/Ui/feature-8-receiving/dashboard-receive-stock.jpg)
+
 ---
 
 ## Definition of Done

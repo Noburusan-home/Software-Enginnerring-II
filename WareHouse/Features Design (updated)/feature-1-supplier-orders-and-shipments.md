@@ -329,6 +329,18 @@ Operational order and shipment records are **shared** among signed-in warehouse 
 *   Product lines: SKU, description, quantity, price, total
 *   **Empty state:** `"No shipments yet. Create your first shipment."`
 
+### Mockups (guidance only)
+
+Dashboard frames that show **Pending Orders**, **In Transit**, **Recent / Pending Shipments**, **Create Order**, and **Record Shipment**:
+
+![Orders and shipments dashboard](../Docs/Ui/feature-1-orders/dashboard-orders-shipments.jpg)
+
+![Recent orders](../Docs/Ui/feature-1-orders/dashboard-recent-orders.jpg)
+
+![Pending shipments](../Docs/Ui/feature-1-orders/dashboard-pending-shipments.jpg)
+
+![Quick actions for orders and shipments](../Docs/Ui/feature-1-orders/dashboard-quick-actions-orders.jpg)
+
 ---
 
 ## Definition of Done
